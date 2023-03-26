@@ -33,3 +33,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+  color: #E7E7E7;
+}
