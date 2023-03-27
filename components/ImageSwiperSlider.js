@@ -33,6 +33,7 @@ export default function ImageSwiperSlider() {
         grabCursor={true}
         className="w-full font-neutralFace h-[50vh] md:h-[65vh] relative mt-[40vh] md:mt-[33vh]"
       >
+        {/* Silde 1 */}
         <SwiperSlide className="flex justify-start flex-col w-fit">
           <div className="h-[100%] flex items-end">
             <Image
@@ -42,7 +43,7 @@ export default function ImageSwiperSlider() {
             />
           </div>
           <div className="flex justify-between items-end h-[100%]">
-            <div className="flex flexcol justify-between h-full py-1 px-2">
+            <div className="flex flex-col justify-between h-full py-1 px-2">
               <p className="uppercase">multiple</p>
               <p>(01)</p>
             </div>
