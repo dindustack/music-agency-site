@@ -4,6 +4,7 @@ import ImageSwiperSlider from "../components/ImageSwiperSlider";
 import About from "../components/About";
 import Concepts from "../components/Concepts";
 import Publications from "../components/Publications";
+import Awards from "../components/Awards";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <About />
       <Concepts />
       <Publications />
+      <Awards />
     </div>
   );
 }
