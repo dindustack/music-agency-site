@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import ImageSwiperSlider from "../components/ImageSwiperSlider";
 import About from "../components/About";
 import Concepts from "../components/Concepts";
+import Publications from "../components/Publications";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <ImageSwiperSlider />
       <About />
       <Concepts />
+      <Publications />
     </div>
   );
 }
