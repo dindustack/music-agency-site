@@ -64,7 +64,7 @@ export default function ImageSwiperSlider() {
             />
           </div>
           <div className="flex justify-between items-end h-[100%]">
-            <div className="flex flex-col justify-between h-full py-1 px-2">
+            <div className="flex flex-col justify-between h-full py-1 sm:px-0 md:px-2">
               <p>
                 <span className="text-red-700">g-star raw</span>
                 <br /> 1:00
