@@ -5,6 +5,7 @@ import About from "../components/About";
 import Concepts from "../components/Concepts";
 import Publications from "../components/Publications";
 import Awards from "../components/Awards";
+import Office from "../components/Office";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Concepts />
       <Publications />
       <Awards />
+      <Office />
     </div>
   );
 }
