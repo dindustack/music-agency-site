@@ -6,6 +6,7 @@ import Concepts from "../components/Concepts";
 import Publications from "../components/Publications";
 import Awards from "../components/Awards";
 import Office from "../components/Office";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Publications />
       <Awards />
       <Office />
+      <Footer />
     </div>
   );
 }
