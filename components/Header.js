@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import close from "../images/close-outline.svg";
 import menu from "../images/menu-outline.svg";
 import Image from "next/image";
+import gsap from "gsap";
 
 export default function Header() {
   let resMenu = useRef(null);
@@ -12,6 +13,39 @@ export default function Header() {
   let resMenuItem2 = useRef(null);
   let resMenuItem3 = useRef(null);
   let resMenuItem4 = useRef(null);
+
+  const menuCollapse = gsap.timeline({
+    paused: "true",
+    reversed: "true",
+  });
+
+  useEffect(() => {
+    menuCollapse.to(resMenu.current, {
+      y: 0,
+      zIndex: 100,
+      duration: 0.2,
+    });
+    menuCollapse.from(
+      [
+        resMenuHeader.current,
+        resMenuItem1.current,
+        resMenuItem2.current,
+        resMenuItem3.current,
+        resMenuItem4.current,
+      ],
+      {
+        duration: 0.5,
+        stagger: {
+          amount: 0.4,
+        },
+        y: -50,
+      }
+    );
+  });
+
+  function menuOpen() {
+    menuCollapse.reversed() ? menuCollapse.play() : menuCollapse.reverse();
+  }
 
   return (
     <div>
@@ -28,7 +62,7 @@ export default function Header() {
             Agbaetuo
           </div>
           <div
-            // onClick={menuOpen}
+            onClick={menuOpen}
             className="block md:hidden cursor-pointer mx-[5px]"
           >
             <Image src={close} className="w-9 object-contain invert" alt="" />
@@ -90,7 +124,7 @@ export default function Header() {
             OFFICE
           </div>
           <div
-            // onClick={menuOpen}
+            onClick={menuOpen}
             className="block md:hidden cursor-pointer mx-[5px]"
           >
             <Image alt="" src={menu} className="w-9 object-contain invert" />

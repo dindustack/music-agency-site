@@ -17,7 +17,7 @@ export default function Office() {
           </h1>
           <Image src={office} alt="" className="w-[50vw]"  />
         </div>
-        <h1 className="text-5xl md:text-7xl font-bold flex items-start">
+        <h1 className="text-2xl md:text-7xl font-bold flex items-start">
           amsterdam
           <span className="text-xl font-normal mt-2 mx-5">(9:34 pm)</span>
         </h1>
@@ -27,7 +27,7 @@ export default function Office() {
         <div className="text-lg">
           (lets hear <br /> something)
         </div>
-        <div className="text-5xl font-bold">dindustack.com</div>
+        <div className="text-2xl md:text-3xl lg:text-8xl font-bold">dindustack.com</div>
       </div>
       <div className="w-full h-[3px] bg-white"></div>
     </div>
