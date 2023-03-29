@@ -30,8 +30,8 @@ export default function Awards() {
           </div>
         </div>
       </div>
-      <div className="h-[50vh] sm:h-[70vh] bg-black text-[#E7E7E7]">
-        <div className="flex items-center justify-center w-full h-full text-center text-7xl sm:text-9xl md:text-[10rem]">
+      <div className="h-[50vh] sm:h-[70vh] bg-black text-[#e7e7e7]">
+        <div className="flex items-center justify-center w-full h-full text-center text-7xl sm:text-9xl md:text-[10rem] xl:text-[16rem] leading-none">
           <h1 className="-mt-[50vh] mix-blend-difference">
             we play <br /> to win
           </h1>
