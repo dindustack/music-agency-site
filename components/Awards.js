@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 import award1 from "../images/award1.png";
 import award2 from "../images/award2.png";
 import award3 from "../images/award3.png";
@@ -37,53 +40,82 @@ export default function Awards() {
           </h1>
         </div>
       </div>
-      <div className="absolute top-[35%] right-[10%]">
-        <Image
-          alt=""
-          src={award1}
-          className="h-28 sm:h-44 md:h-80 z-10 object-contain"
-        />
+      <div className="hidden lg:block">
+        <div className="absolute top-[35%] right-[10%]">
+          <Image
+            alt=""
+            src={award1}
+            className="h-28 sm:h-44 md:h-80 z-10 object-contain"
+          />
+        </div>
+
+        <div className="absolute bottom-[15%] left-[15%]">
+          <Image
+            alt=""
+            src={award2}
+            className="h-28 sm:h-44 md:h-80 z-10 object-contain"
+          />
+        </div>
+
+        <div className="absolute bottom-[50%] left-[20%]">
+          <Image
+            alt=""
+            src={award3}
+            className="h-28 sm:h-44 md:h-80 z-10 object-contain"
+          />
+        </div>
+
+        <div className="absolute bottom-[30%] left-[60%]">
+          <Image
+            alt=""
+            src={award4}
+            className="h-28 sm:h-32 md:h-52 z-10 object-contain"
+          />
+        </div>
+
+        <div className="absolute right-[50%] bottom-[30%]">
+          <Image
+            alt=""
+            src={award5}
+            className="h-28 sm:h-44 md:h-80 z-10 object-contain"
+          />
+        </div>
+
+        <div className="absolute bottom-[15%] right-[35%]">
+          <Image
+            alt=""
+            src={award6}
+            className="h-28 sm:h-32 md:h-48 z-10 object-contain"
+          />
+        </div>
       </div>
 
-      <div className="absolute bottom-[15%] left-[15%]">
-        <Image
-          alt=""
-          src={award2}
-          className="h-28 sm:h-44 md:h-80 z-10 object-contain"
-        />
-      </div>
-
-      <div className="absolute bottom-[50%] left-[20%]">
-        <Image
-          alt=""
-          src={award3}
-          className="h-28 sm:h-44 md:h-80 z-10 object-contain"
-        />
-      </div>
-
-      <div className="absolute bottom-[30%] left-[60%]">
-        <Image
-          alt=""
-          src={award4}
-          className="h-28 sm:h-32 md:h-52 z-10 object-contain"
-        />
-      </div>
-
-      <div className="absolute right-[50%] bottom-[30%]">
-        <Image
-          alt=""
-          src={award5}
-          className="h-28 sm:h-44 md:h-80 z-10 object-contain"
-        />
-      </div>
-
-      <div className="absolute bottom-[15%] right-[35%]">
-        <Image
-          alt=""
-          src={award6}
-          className="h-28 sm:h-32 md:h-48 z-10 object-contain"
-        />
-      </div>
+      {/* Swiper for awards in mobile view */}
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={3}
+        grabCursor={true}
+        className="w-full block lg:hidden flex flex-row font-neutralFace"
+      >
+        <SwiperSlide>
+          <Image alt="" src={award1} className="h-28 object-contain" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image alt="" src={award2} className="h-28 object-contain" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image alt="" src={award3} className="h-28 object-contain" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image alt="" src={award4} className="h-28 object-contain" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image alt="" src={award5} className="h-28 object-contain" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image alt="" src={award6} className="h-28 object-contain" />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 }
